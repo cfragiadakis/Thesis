@@ -1,0 +1,11 @@
+To create a venv on Snellius and connect with jupyter notebook:
+open terminal via Jupyter (ondemand.snellius.surf.nl) and execute the following:
+
+module purge
+module load 2024 Python/3.12.3-GCCcore-13.3.0
+
+python -m pip install --user ipykernel
+python -m ipykernel install --user --name py312 --display-name "Python 3.12 (Snellius)"
+
+To connect venv with VS Code
+select interpreter -> venv/bin/python  (select the python executable)
