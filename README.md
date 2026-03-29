@@ -1,2 +1,2 @@
 # Thesis
-Fairness-Aware Real-Time Student Engagement Estimation
+Fairness-Aware Multimodal Transformer Modeling for Real-Time Student Attention Estimation
