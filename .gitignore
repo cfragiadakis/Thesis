@@ -206,5 +206,6 @@ marimo/_static/
 marimo/_lsp/
 __marimo__/
 
-Fairness
-archive
+extracted_data
+extracted_data_old
+DIPSER
