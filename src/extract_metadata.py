@@ -20,12 +20,23 @@ def extract_metadata(json_path):
         gender = face.get("gender", {}).get("gender_name", None)
         race = face.get("race", {}).get("dominant_race", None)
 
-        return age, gender, race
+        # race probabilities
+        prob_race = face.get("race", {}).get("probability_race", {})
+
+        return (
+            age,
+            gender,
+            race,
+            prob_race.get("asian", None),
+            prob_race.get("indian", None),
+            prob_race.get("black", None),
+            prob_race.get("white", None),
+            prob_race.get("middle eastern", None),
+            prob_race.get("latino hispanic", None),
+        )
 
     except Exception:
-        return None, None, None
-
-
+        return (None,) * 9
 
 # Parallel processing
 
@@ -39,8 +50,19 @@ def process_dataframe(df, n_jobs):
         if i % 5000 == 0:
             logger.info(f"Processed {i}/{len(paths)} rows")
 
-    df[["age", "gender_name", "race"]] = pd.DataFrame(results, index=df.index)
+    df[[
+    "age",
+    "gender_name",
+    "race",
+    "race_asian",
+    "race_indian",
+    "race_black",
+    "race_white",
+    "race_middle_eastern",
+    "race_latino_hispanic"
+    ]] = pd.DataFrame(results, index=df.index)
     return df
+
 
 
 def main():
