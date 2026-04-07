@@ -40,18 +40,67 @@ def build_sensor_intervals(sensor_folder):
 
 
 
-def find_sensor_interval(target_time, intervals, idx):
+#def find_sensor_interval(target_time, intervals, idx):
+#    n = len(intervals)
+#
+#    while idx < n - 1 and target_time > intervals[idx][2]:
+#        idx += 1
+#
+#    f, start, end = intervals[idx]
+#
+#    if start <= target_time <= end:
+#        return f, idx
+#
+#    return None, idx
+
+
+def find_sensor_interval(target_time, intervals, idx, max_diff_sec=0.5):
     n = len(intervals)
 
+    # Move pointer forward
     while idx < n - 1 and target_time > intervals[idx][2]:
         idx += 1
 
+    candidates = []
+
+    # current
     f, start, end = intervals[idx]
+    dist_current = min(
+        abs((target_time - start).total_seconds()),
+        abs((target_time - end).total_seconds())
+    )
+    candidates.append((dist_current, idx))
 
-    if start <= target_time <= end:
-        return f, idx
+    # previous
+    if idx > 0:
+        f_prev, s_prev, e_prev = intervals[idx - 1]
+        dist_prev = min(
+            abs((target_time - s_prev).total_seconds()),
+            abs((target_time - e_prev).total_seconds())
+        )
+        candidates.append((dist_prev, idx - 1))
 
-    return None, idx
+    # next
+    if idx < n - 1:
+        f_next, s_next, e_next = intervals[idx + 1]
+        dist_next = min(
+            abs((target_time - s_next).total_seconds()),
+            abs((target_time - e_next).total_seconds())
+        )
+        candidates.append((dist_next, idx + 1))
+
+    # pick closest
+    best_dist, best_idx = min(candidates, key=lambda x: x[0])
+
+    # if the frame does not correspond to any of the intervals, assign it to the closest one 
+    # as long as the difference is not higher than threshold (1 second)
+    if best_dist > max_diff_sec:
+        return None, idx
+
+    f_best = intervals[best_idx][0]
+
+    return f_best, best_idx
+
 
 
 def compute_magnitude(x, y, z):
@@ -175,10 +224,10 @@ if __name__ == "__main__":
 
     args = parser.parse_args()
 
-    df = pd.read_csv(args.input_file)
+    df = pd.read_parquet(args.input_file)
 
     sensors_df = add_sensors_to_df(df, args.base_path)
 
-    sensors_df.to_csv(args.output_file, index=False)
+    sensors_df.to_parquet(args.output_file, engine='pyarrow', index=False)
 
     logger.info("Finished enrichment")
