@@ -101,7 +101,8 @@ class DataProcessor:
             for sensor, value in sensor_value.items():
                 if sensor == "type_sensor":
                     continue
-                elif sensor.lower() == "time":
+                #elif sensor.lower() == "time":
+                elif sensor.lower() in ["time", "timestamp"]:
                     new_row["time"] = value
                 else:
                     type_sensor = sensor_value["type_sensor"]
