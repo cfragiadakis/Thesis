@@ -26,7 +26,7 @@ class SensorReader:
     @staticmethod
     def _read_json_file(file_path):
         with open(file_path, 'r') as file:
-            return json.load(file).get("Datos", {})
+            return json.load(file).get("data", {})
 
     @staticmethod
     def _parse_sensor_data(data):
