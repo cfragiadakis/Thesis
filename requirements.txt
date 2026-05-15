@@ -6,3 +6,5 @@ pyarrow
 plotly
 tqdm
 loguru
+sklearn
+pyarrow
