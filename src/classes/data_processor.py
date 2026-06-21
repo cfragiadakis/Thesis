@@ -1,6 +1,7 @@
 import pandas as pd
 import os
 import datetime
+from pathlib import Path
 from loguru import logger
 
 from classes.image_processor import ImageProcessor
@@ -35,10 +36,10 @@ class DataProcessor:
         subject = None
         experiment = None
 
-        for part in subject_path.split("/"):
-            if "experiment" in part:
+        for part in Path(subject_path).parts:
+            if part.startswith("experiment"):
                 experiment = part
-            elif "subject" in part:
+            elif part.startswith("subject"):
                 subject = part
 
         return subject, experiment
