@@ -4,9 +4,9 @@ import datetime
 from pathlib import Path
 from loguru import logger
 
-from classes.image_processor import ImageProcessor
-from classes.label_reader import LabelReader
-from classes.sensor_reader import SensorReader
+from .image_processor import ImageProcessor
+from .label_reader import LabelReader
+from .sensor_reader import SensorReader
 
 
 class DataProcessor:
