@@ -29,6 +29,7 @@ HEART_RATE_STD_COL = "samsung_hr_none_wakeup_sensor value0_std"
 ROTATION_COL = "samsung_rotation_vector value0_mean"
 MISSING_SENSORS_THRESHOLD = 0.3
 EXCLUDED_SUBJECT_EXPERIMENT = "group01_experiment04_subject_15"
+AGE_GROUP_BINS = [13, 20, 22, 26, 44]
 
 
 def parse_args():
@@ -82,6 +83,7 @@ def finalize_dataset(df):
     df = df.drop(columns=["race", "gender_name", "age"])
     df = df.merge(subject_metadata, on=["group", "subject"], how="left")
     df["age"] = pd.to_numeric(df["age"], errors="coerce").round()
+    df["age_group"] = pd.cut(df["age"], bins=AGE_GROUP_BINS).astype(str)
     df = df.drop(columns=RACE_COLS)
 
     # Subject-experiment IDs are the unit used for sequence construction and
