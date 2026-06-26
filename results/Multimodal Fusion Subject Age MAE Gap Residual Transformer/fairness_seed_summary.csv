@@ -1,0 +1,3 @@
+attribute,seeds,mean_overall_mae_gain,mean_worst_group_mae_gain,worst_group_gain_positive_rate,mean_gap_reduction,gap_reduction_positive_rate
+age_group,10,-0.008594913946511861,-0.019767072465391416,0.1,-0.023706643893306085,0.1
+gender,10,-0.008594913946511861,-0.01534971480074982,0.2,-0.012201485899211767,0.1

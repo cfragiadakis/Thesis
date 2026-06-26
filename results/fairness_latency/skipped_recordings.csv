@@ -1,0 +1,16 @@
+input,base_input,repeat,reason,raw_rows,unique_image_paths,existing_image_paths,missing_image_paths,aggregated_image_rows
+/gpfs/work5/0/prjs2039/extracted_data_extended/group02/experiment03/subject_20.csv,group02_experiment03_subject_20,1,No rows remain after DIPSER sensor cleaning.,93735,2241,2241,0,2241
+/gpfs/work5/0/prjs2039/extracted_data_extended/group02/experiment04/subject_20.csv,group02_experiment04_subject_20,1,No rows remain after DIPSER sensor cleaning.,93089,2207,2207,0,2207
+/gpfs/work5/0/prjs2039/extracted_data_extended/group02/experiment05/subject_20.csv,group02_experiment05_subject_20,1,No rows remain after DIPSER sensor cleaning.,93565,2377,2377,0,2377
+/gpfs/work5/0/prjs2039/extracted_data_extended/group02/experiment03/subject_20.csv,group02_experiment03_subject_20,2,No rows remain after DIPSER sensor cleaning.,93735,2241,2241,0,2241
+/gpfs/work5/0/prjs2039/extracted_data_extended/group02/experiment04/subject_20.csv,group02_experiment04_subject_20,2,No rows remain after DIPSER sensor cleaning.,93089,2207,2207,0,2207
+/gpfs/work5/0/prjs2039/extracted_data_extended/group02/experiment05/subject_20.csv,group02_experiment05_subject_20,2,No rows remain after DIPSER sensor cleaning.,93565,2377,2377,0,2377
+/gpfs/work5/0/prjs2039/extracted_data_extended/group02/experiment03/subject_20.csv,group02_experiment03_subject_20,3,No rows remain after DIPSER sensor cleaning.,93735,2241,2241,0,2241
+/gpfs/work5/0/prjs2039/extracted_data_extended/group02/experiment04/subject_20.csv,group02_experiment04_subject_20,3,No rows remain after DIPSER sensor cleaning.,93089,2207,2207,0,2207
+/gpfs/work5/0/prjs2039/extracted_data_extended/group02/experiment05/subject_20.csv,group02_experiment05_subject_20,3,No rows remain after DIPSER sensor cleaning.,93565,2377,2377,0,2377
+/gpfs/work5/0/prjs2039/extracted_data_extended/group02/experiment03/subject_20.csv,group02_experiment03_subject_20,4,No rows remain after DIPSER sensor cleaning.,93735,2241,2241,0,2241
+/gpfs/work5/0/prjs2039/extracted_data_extended/group02/experiment04/subject_20.csv,group02_experiment04_subject_20,4,No rows remain after DIPSER sensor cleaning.,93089,2207,2207,0,2207
+/gpfs/work5/0/prjs2039/extracted_data_extended/group02/experiment05/subject_20.csv,group02_experiment05_subject_20,4,No rows remain after DIPSER sensor cleaning.,93565,2377,2377,0,2377
+/gpfs/work5/0/prjs2039/extracted_data_extended/group02/experiment03/subject_20.csv,group02_experiment03_subject_20,5,No rows remain after DIPSER sensor cleaning.,93735,2241,2241,0,2241
+/gpfs/work5/0/prjs2039/extracted_data_extended/group02/experiment04/subject_20.csv,group02_experiment04_subject_20,5,No rows remain after DIPSER sensor cleaning.,93089,2207,2207,0,2207
+/gpfs/work5/0/prjs2039/extracted_data_extended/group02/experiment05/subject_20.csv,group02_experiment05_subject_20,5,No rows remain after DIPSER sensor cleaning.,93565,2377,2377,0,2377

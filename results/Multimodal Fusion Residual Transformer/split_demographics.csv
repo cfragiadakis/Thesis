@@ -1,0 +1,19 @@
+split,attribute,group,subjects,proportion
+train,age_group,"(13, 20]",13,0.3333333333333333
+train,age_group,"(20, 22]",10,0.2564102564102564
+train,age_group,"(22, 26]",10,0.2564102564102564
+train,age_group,"(26, 44]",6,0.15384615384615385
+train,gender,female,27,0.6923076923076923
+train,gender,male,12,0.3076923076923077
+validation,age_group,"(13, 20]",3,0.3333333333333333
+validation,age_group,"(20, 22]",3,0.3333333333333333
+validation,age_group,"(22, 26]",2,0.2222222222222222
+validation,age_group,"(26, 44]",1,0.1111111111111111
+validation,gender,female,6,0.6666666666666666
+validation,gender,male,3,0.3333333333333333
+test,age_group,"(13, 20]",3,0.3333333333333333
+test,age_group,"(20, 22]",2,0.2222222222222222
+test,age_group,"(22, 26]",3,0.3333333333333333
+test,age_group,"(26, 44]",1,0.1111111111111111
+test,gender,female,6,0.6666666666666666
+test,gender,male,3,0.3333333333333333

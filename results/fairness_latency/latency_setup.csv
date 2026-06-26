@@ -1,0 +1,5 @@
+input,stage,seconds,base_input,repeat,skipped,prediction_windows,seconds_per_prediction_window,skip_reason,milliseconds
+setup,reference_scaler_reconstruction,0.6171784750185907,,,,,,,617.1784750185907
+setup,clip_model_load,6.961099372943863,,,,,,,6961.099372943863
+setup,fairness_checkpoint_load,0.3169037268962711,,,,,,,316.9037268962711
+setup,setup_total,8.095544531010091,,,,,,,8095.544531010091
