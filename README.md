@@ -90,7 +90,6 @@ The experiment notebooks include:
 Sensor Baseline.ipynb
 Visual Baseline.ipynb
 Fusion Residual Transformer Baseline .ipynb
-Temporal Fusion Subject Age Residual Transformer.ipynb
 Temporal Fusion Subject Age MAE Gap Residual Transformer.ipynb
 Temporal Fusion Subject Gender MAE Gap Residual Transformer.ipynb
 ```
