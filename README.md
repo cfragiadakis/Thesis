@@ -94,3 +94,10 @@ Temporal Fusion Subject Age MAE Gap Residual Transformer.ipynb
 Temporal Fusion Subject Gender MAE Gap Residual Transformer.ipynb
 ```
 
+
+## References
+
+**DIPSER: A Dataset for In-Person Student Engagement Recognition in the Wild**
+Luis Marquez-Carpintero, Sergio Suescun-Ferrandiz, Carolina Lorenzo Álvarez, Jorge Fernandez-Herrero, Diego Viejo, Rosabel Roig-Vila, Miguel Cazorla
+Computer Vision and Pattern Recognition (cs.CV); Artificial Intelligence (cs.AI)
+arXiv: 2502.20209v2 [cs.CV], 2 Mar 2025
