@@ -49,16 +49,8 @@ python -m src.preprocessing.preprocessing_pipeline \
   --num-workers 4
 ```
 
-If preprocessing was interrupted, reuse existing subject CSVs and aggregated
-subject parquet files:
+If preprocessing was interrupted, `--skip-existing` can be used.
 
-```bash
-python -m src.preprocessing.preprocessing_pipeline \
-  --raw-root Data/DIPSER \
-  --output-dir Data \
-  --num-workers 4 \
-  --skip-existing
-```
 
 To process only part of the dataset, add one or more filters:
 
@@ -133,16 +125,8 @@ python -m src.preprocessing.aggregate_sensor_data \
   --num-workers 4
 ```
 
-Resume without recomputing existing subject parquet files:
+ If preprocessing was interrupted, `--skip-existing` can be used to avoid recomputing existing subject parquet files
 
-```bash
-python -m src.preprocessing.aggregate_sensor_data \
-  --input-dir Data/extracted_data_extended \
-  --output-dir Data/extracted_data_aggregated \
-  --initial-data Data/initial_data.parquet \
-  --num-workers 4 \
-  --skip-existing
-```
 
 ## Step 3: Extract Demographic Metadata
 
