@@ -1,6 +1,9 @@
 # Fairness-Aware Multimodal Transformer Modeling for Real-Time Student Attention Estimation
 
-This repository contains the preprocessing and experiment code for multimodal student attention estimation using visual frames, smartwatch sensor data, labels, and demographic metadata from the DIPSER dataset.
+This repository contains the implementation of my Master's thesis, completed as part of the [MSc Information Studies](https://www.uva.nl/en/programmes/masters/information-studies/information-studies.html) programme at the [University of Amsterdam](https://www.uva.nl/en).
+
+The project investigates whether fairness-aware multimodal transformer models can reduce demographic disparities in automatic student attention estimation while maintaining predictive performance. Using the DIPSER dataset, it combines visual information, smartwatch sensor data, and demographic metadata to compare unimodal and multimodal architectures. It also evaluates fairness-aware training based on subgroup error disparities.
+
 
 ## Data
 
