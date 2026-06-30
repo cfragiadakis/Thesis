@@ -60,11 +60,8 @@ Arguments:
 --skip-existing  Reuse already created subject CSV files and aggregated subject parquet files. Useful when preprocessing was interrupted.
 ```
 
-For a detailed explanation of each preprocessing stage and its intermediate files, see:
-
-```text
-src/preprocessing/README.md
-```
+For a detailed explanation of the preprocessing pipeline and its intermediate files, see
+[`src/preprocessing/README.md`](src/preprocessing/README.md).
 
 ## Extract CLIP Visual Features
 
