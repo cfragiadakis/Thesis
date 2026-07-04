@@ -1,6 +1,17 @@
 # Fairness-Aware Multimodal Transformer Modeling for Real-Time Student Attention Estimation
 
-This repository contains the preprocessing and experiment code for multimodal student attention estimation using visual frames, smartwatch sensor data, labels, and demographic metadata from the DIPSER dataset.
+This repository contains the implementation of my Master's thesis, completed as part of the [MSc Information Studies](https://www.uva.nl/en/programmes/masters/information-studies/information-studies.html) programme at the [University of Amsterdam](https://www.uva.nl/en).
+
+## Thesis
+
+- **Author:** Christoforos Fragkiadakis
+- **Programme:** MSc Information Studies, Data Science Track
+- **University:** University of Amsterdam
+- **Supervisor:** [Dr. S.S. (Sahand) Mohammadi Ziabari](https://www.uva.nl/en/profile/m/o/s.s.mohammadi-ziabari/s.s.mohammadi-ziabari.html)
+- **Thesis:** [`Thesis.pdf`](Thesis.pdf)
+
+## Abstract
+Student attention is a key factor in learning and academic performance, yet existing engagement models are evaluated primarily using aggregate predictive metrics and often overlook demographic disparities. This thesis investigates whether fairness-aware multimodal transformer models can reduce demographic disparities in student attention estimation while maintaining predictive performance. Experiments were conducted on the DIPSER dataset which combines facial images, wearable sensor measurements, attention annotations, and demographic metadata collected in natural classroom settings. Three baseline architectures were evaluated: a visual GRU, a sensor GRU, and a Residual Fusion Transformer that integrates both modalities. Fairness-aware training was subsequently applied to the architecture with the lowest mean validation error, using demographic disparity regularization to target gender and age-based error disparities. The results show that multimodal fusion achieved the best average predictive performance and the lowest worst-group error among the baseline models, while visual information remained the dominant modality. Fairness regularization reduced disparities during validation but did not consistently generalize to unseen subjects. These findings highlight the challenges of achieving stable fairness improvements in multimodal educational AI systems.
 
 ## Data
 
@@ -57,11 +68,8 @@ Arguments:
 --skip-existing  Reuse already created subject CSV files and aggregated subject parquet files. Useful when preprocessing was interrupted.
 ```
 
-For a detailed explanation of each preprocessing stage and its intermediate files, see:
-
-```text
-src/preprocessing/README.md
-```
+For a detailed explanation of the preprocessing pipeline and its intermediate files, see
+[`src/preprocessing/README.md`](src/preprocessing/README.md).
 
 ## Extract CLIP Visual Features
 
