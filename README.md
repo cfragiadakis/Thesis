@@ -42,7 +42,7 @@ Data/DIPSER/
       subject_01/
         images/
         labels/          # attention and emotion annotations
-        metadata.tar     # frame metadata, demographics, face attributes
+        metadata/ or metadata.tar     # frame metadata, demographics, face attributes
         watch_sensors/   # smartwatch sensor JSON files
 ```
 
